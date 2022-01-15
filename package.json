@@ -3,6 +3,7 @@
 	"name": "fcc-learn-npm-package-json",
 	"description": "FCC backend challenge project",
 	"keywords": ["freecodecamp","backend","challenge"],
+	"license": "None",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
