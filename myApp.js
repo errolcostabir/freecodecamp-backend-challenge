@@ -1,5 +1,6 @@
 var express=require("express");
 var app=express();
+require('dotenv').config();
 
 console.log("Hello World");
 
@@ -9,7 +10,13 @@ app.get('/',function(req,res){
 });
 
 app.get('/json',function(req,res){
-    res.json({"message": "Hello json"});
+    //res.json({"message": "Hello json"});
+    if(process.env.MESSAGE_STYLE){
+        res.json({"message": "HELLO JSON"});
+    }
+    else{
+        res.json({"message": "Hello json"});
+    }
 });
     
 app.use('/public',express.static(__dirname+'/public'));
