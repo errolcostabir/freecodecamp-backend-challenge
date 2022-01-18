@@ -23,5 +23,9 @@
 	"repository": {
 		"type": "git",
 		"url": "https://idontknow/todo.git"
+	},
+	"env":{
+		"production": true
 	}
+
 }
