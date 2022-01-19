@@ -14,10 +14,10 @@ app.get('/json',function(req,res){
     //console.log(process.env.MESSAGE_STYLE);
     var mStyle=process.env.MESSAGE_STYLE;
     if(mStyle==='uppercase'){
-        res.json({"message": "HELLO JSON"});
+        return res.json({"message": "HELLO JSON"});
     }
     else{
-        res.json({"message": "Hello json"});
+        return res.json({"message": "Hello json"});
     }
 });
     
