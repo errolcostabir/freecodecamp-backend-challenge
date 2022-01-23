@@ -10,12 +10,11 @@
 	"license": "None",
 	"version": "1.0.0",
 	"dependencies": {
-		"body-parser": "^1.15.2",
+		"body-parser": "^1.19.1",
 		"cookie-parser": "^1.4.3",
 		"dotenv": "^14.1.0",
 		"express": "^4.14.0",
 		"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git"
-		
 	},
 	"main": "server.js",
 	"scripts": {
@@ -25,8 +24,7 @@
 		"type": "git",
 		"url": "https://idontknow/todo.git"
 	},
-	"env":{
+	"env": {
 		"production": true
 	}
-
 }

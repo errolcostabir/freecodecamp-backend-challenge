@@ -1,6 +1,10 @@
 var express=require("express");
 var app=express();
 require('dotenv').config();
+var bodyParser=require('body-parser');
+
+
+app.use(bodyParser.urlencoded({extended: false}));
 
 //console.log("Hello World");
 
