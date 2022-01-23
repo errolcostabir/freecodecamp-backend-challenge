@@ -17,7 +17,7 @@ app.get('/',function(req,res){
     //res.send("Hello Express");
     res.sendFile(__dirname+'/views/index.html');
     console.log(req.method+" "+req.path+" - "+req.ip);
-    next();
+    //next();
 });
 
 app.get('/now',function(req,res,next){
@@ -36,8 +36,8 @@ app.get('/:word/echo',function(req,res,next){
 });
 
 
-app.get('/name',function(req,res,next){
-    var name=req.query.first+" "+req.query.last;
+app.post('/name',function(req,res,next){
+    var name=req.body.first+" "+req.body.last;
     res.json({"name": name});
 })
 
