@@ -3,12 +3,6 @@ var app=express();
 require('dotenv').config();
 
 //console.log("Hello World");
-app.get('/now',function(req,res){
-    next();
-},function(req,res){
-    req.time= new Date().toString();
-    res.json({"time": req.time});
-});
 
 app.get('/json',function(req,res){
     console.log(req.method+" "+req.path+" - "+req.ip);
@@ -22,6 +16,15 @@ app.get('/',function(req,res){
     next();
 });
 
+app.get('/now',function(req,res,next){
+    req.time= new Date().toString();
+    //var time =new Date().toString();
+    ///console.log(time);
+    next();
+},function(req,res){
+    //console.log(time);
+    res.json({"time": req.time});
+});
 
 /* app.get('/json',function(req,res){
     //res.json({"message": "Hello json"});
