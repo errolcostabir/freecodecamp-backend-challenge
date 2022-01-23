@@ -31,6 +31,12 @@ app.get('/:word/echo',function(req,res,next){
     res.json({"echo": req.params.word});
 });
 
+
+app.get('/name',function(req,res,next){
+    var name=req.query.first+" "+req.query.last;
+    res.json({"name": name});
+})
+
 /* app.get('/json',function(req,res){
     //res.json({"message": "Hello json"});
     //console.log(process.env.MESSAGE_STYLE);
