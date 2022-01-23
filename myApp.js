@@ -4,10 +4,10 @@ require('dotenv').config();
 
 //console.log("Hello World");
 app.get('/now',function(req,res){
-    req.time= new Date().toString();
     next();
 },function(req,res){
-    res.json({time: req.time});
+    req.time= new Date().toString();
+    res.json({"time": req.time});
 });
 
 app.get('/json',function(req,res){
